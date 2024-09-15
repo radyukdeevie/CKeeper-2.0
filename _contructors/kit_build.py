@@ -42,29 +42,7 @@ def create_ui(MainWindow):
     scrollArea.setWidgetResizable(True)
     scrollArea.setObjectName("scrollArea")
 
-    order_widg_1 = QtWidgets.QWidget()
-    order_widg_1.setGeometry(QtCore.QRect(0, 0, 771, 361))
-    order_widg_1.setObjectName("order_widg_1")
-
-    formLayout = QtWidgets.QFormLayout(order_widg_1)
-    formLayout.setObjectName("formLayout")
-
-    # label for order
-    order_lbl_1 = QtWidgets.QLabel(order_widg_1)
-    order_lbl_1.setFont(set_font("Century Gothic", 15, False))
-    order_lbl_1.setText("Круассан с лососем | 14:48")
-    order_lbl_1.setObjectName("order_lbl_1")
-    formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, order_lbl_1)
-
-    # button for order
-    order_btn_1 = QtWidgets.QPushButton(order_widg_1)
-    order_btn_1.setFont(set_font("Century Gothic", 12, False))
-    order_btn_1.setText("Готов")
-    set_btn(order_btn_1)
-    order_btn_1.setObjectName("order_btn_1")
-    formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, order_btn_1)
-
-    scrollArea.setWidget(order_widg_1)
+    # scrollArea.setWidget(order_widg_1)
     gridLayout_2.addWidget(scrollArea, 0, 0, 1, 1)
     tabWidget.addTab(active_order, "Активные")
 
@@ -103,3 +81,17 @@ def create_ui(MainWindow):
     MainWindow.setCentralWidget(centralwidget)
 
     QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    return {
+        "centralwidget": centralwidget,
+        "name_label": name_label,
+        "gridLayout": gridLayout,
+        "tabWidget": tabWidget,
+        "active_order": active_order,
+        "gridLayout_2": gridLayout_2,
+        "scrollArea": scrollArea,
+        "scrollArea_2": scrollArea_2,
+        "close_order": close_order,
+        "gridLayout_3": gridLayout_3,
+        "scrollAreaWidgetContents": scrollAreaWidgetContents
+    }
