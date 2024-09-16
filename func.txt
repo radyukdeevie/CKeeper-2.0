@@ -1,0 +1,12 @@
+Создание заказа
+create_order(table_id, employee_id, array_products_id, array_quantity_products, array_description)
+Удаления заказа
+delete_order(order_id, employee_id)
+Закрытие заказа
+close_order(order_id, employee_id)
+Вывод активных заказов
+get_list_order(order_id)
+Вывести чек за заказ
+get_check(order_id)
+Вывести полною стоимость заказа
+get_full_price(order_id)
